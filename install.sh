@@ -32,7 +32,6 @@ if [ "$ins" = "2" ];then
 	pip install --upgrade pip
 	mv model .model
 	cd .model
-	mv Type_Hashing.py .Type_Hashing.py
 	chmod +x *
 	mv .mohamed /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/
 	cd .. 
@@ -43,10 +42,6 @@ if [ "$ins" = "2" ];then
 	bash HAK5.sh
 elif [ "$ins" = "1" ]; then 
 	mv model .model
-	cd .model
-	chmod +x *
-	mv Type_Hashing.py .Type_Hashing.py
-	cd ..
 	mkdir HAK5_PaYLOad
 	chmod +x HAK5.sh
 	chmod 700 HAK5.sh
