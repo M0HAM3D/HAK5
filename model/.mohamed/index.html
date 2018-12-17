@@ -1,0 +1,563 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Anonymous</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="Web Page Maker (unregistered version)">
+<style type="text/css">
+/*----------Text Styles----------*/
+.ws6 {font-size: 8px;}
+.ws7 {font-size: 9.3px;}
+.ws8 {font-size: 11px;}
+.ws9 {font-size: 12px;}
+.ws10 {font-size: 13px;}
+.ws11 {font-size: 15px;}
+.ws12 {font-size: 16px;}
+.ws14 {font-size: 19px;}
+.ws16 {font-size: 21px;}
+.ws18 {font-size: 24px;}
+.ws20 {font-size: 27px;}
+.ws22 {font-size: 29px;}
+.ws24 {font-size: 32px;}
+.ws26 {font-size: 35px;}
+.ws28 {font-size: 37px;}
+.ws36 {font-size: 48px;}
+.ws48 {font-size: 64px;}
+.ws72 {font-size: 96px;}
+.wpmd {font-size: 13px;font-family: Arial,Helvetica,Sans-Serif;font-style: normal;font-weight: normal;}
+/*----------Para Styles----------*/
+DIV,UL,OL /* Left */
+{
+ margin-top: 0px;
+ margin-bottom: 0px;
+}
+</style>
+
+<script language="JavaScript1.4" type="text/javascript">
+<!--
+function jsPlay(soundobj) {
+ var thissound= eval("document."+soundobj);
+ try {
+     thissound.Play();
+ }
+ catch (e) {
+     thissound.DoPlay();
+ }
+}
+//-->
+</script>
+
+<script language="javascript" type="text/javascript">
+<!--
+function MM_swapImgRestore() {
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() {
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+//-->
+</script>
+
+</head>
+<body background="images/Algeria.gif" bgColor="#000000" style="background-repeat:no-repeat;background-position:top center;">
+<script language="JavaScript">
+
+fCol='444444'; //face colour.
+sCol='FF0000'; //seconds colour.
+mCol='444444'; //minutes colour.
+hCol='444444'; //hours colour.
+
+YCbase=30; //Clock height.
+XCbase=30; //Clock width.
+
+
+H='...';
+H=H.split('');
+M='....';
+M=M.split('');
+S='.....';
+S=S.split('');
+NS4=(document.layers);
+NS6=(document.getElementById&&!document.all);
+IE4=(document.all);
+Ypos=0;
+Xpos=0;
+cdots=12;
+Split=360/cdots;
+if (NS6){
+for (i=1; i < cdots+1; i++){
+document.write('<div id="n6Digits'+i+'" style="position:absolute;top:0px;left:0px;width:30px;height:30px;font-family:Arial;font-size:10px;color:#'+fCol+';text-align:center;padding-top:10px">'+i+'</div>');
+}
+for (i=0; i < M.length; i++){
+document.write('<div id="Ny'+i+'" style="position:absolute;top:0px;left:0px;width:2px;height:2px;font-size:2px;background:#'+mCol+'"></div>');
+}
+for (i=0; i < H.length; i++){
+document.write('<div id="Nz'+i+'" style="position:absolute;top:0px;left:0px;width:2px;height:2px;font-size:2px;background:#'+hCol+'"></div>');
+}
+for (i=0; i < S.length; i++){
+document.write('<div id="Nx'+i+'" style="position:absolute;top:0px;left:0px;width:2px;height:2px;font-size:2px;background:#'+sCol+'"></div>');
+}
+}
+if (NS4){
+dgts='1 2 3 4 5 6 7 8 9 10 11 12';
+dgts=dgts.split(' ')
+for (i=0; i < cdots; i++){
+document.write('<layer name=nsDigits'+i+' top=0 left=0 height=30 width=30><center><font face=Arial size=1 color='+fCol+'>'+dgts[i]+'</font></center></layer>');
+}
+for (i=0; i < M.length; i++){
+document.write('<layer name=ny'+i+' top=0 left=0 bgcolor='+mCol+' clip="0,0,2,2"></layer>');
+}
+for (i=0; i < H.length; i++){
+document.write('<layer name=nz'+i+' top=0 left=0 bgcolor='+hCol+' clip="0,0,2,2"></layer>');
+}
+for (i=0; i < S.length; i++){
+document.write('<layer name=nx'+i+' top=0 left=0 bgcolor='+sCol+' clip="0,0,2,2"></layer>');
+}
+}
+if (IE4){
+document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=1; i < cdots+1; i++){
+document.write('<div id="ieDigits" style="position:absolute;top:0px;left:0px;width:30px;height:30px;font-family:Arial;font-size:10px;color:'+fCol+';text-align:center;padding-top:10px">'+i+'</div>');
+}
+document.write('</div></div>')
+document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < M.length; i++){
+document.write('<div id=y style="position:absolute;width:2px;height:2px;font-size:2px;background:'+mCol+'"></div>');
+}
+document.write('</div></div>')
+document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < H.length; i++){
+document.write('<div id=z style="position:absolute;width:2px;height:2px;font-size:2px;background:'+hCol+'"></div>');
+}
+document.write('</div></div>')
+document.write('<div style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < S.length; i++){
+document.write('<div id=x style="position:absolute;width:2px;height:2px;font-size:2px;background:'+sCol+'"></div>');
+}
+document.write('</div></div>')
+}
+
+
+
+function clock(){
+time = new Date ();
+secs = time.getSeconds();
+sec = -1.57 + Math.PI * secs/30;
+mins = time.getMinutes();
+min = -1.57 + Math.PI * mins/30;
+hr = time.getHours();
+hrs = -1.57 + Math.PI * hr/6 + Math.PI*parseInt(time.getMinutes())/360;
+
+if (NS6){
+Ypos=window.pageYOffset+window.innerHeight-YCbase-25;
+Xpos=window.pageXOffset+window.innerWidth-XCbase-30;
+for (i=1; i < cdots+1; i++){
+ document.getElementById("n6Digits"+i).style.top=Ypos-15+YCbase*Math.sin(-1.56 +i *Split*Math.PI/180)
+ document.getElementById("n6Digits"+i).style.left=Xpos-15+XCbase*Math.cos(-1.56 +i*Split*Math.PI/180)
+ }
+for (i=0; i < S.length; i++){
+ document.getElementById("Nx"+i).style.top=Ypos+i*YCbase/4.1*Math.sin(sec);
+ document.getElementById("Nx"+i).style.left=Xpos+i*XCbase/4.1*Math.cos(sec);
+ }
+for (i=0; i < M.length; i++){
+ document.getElementById("Ny"+i).style.top=Ypos+i*YCbase/4.1*Math.sin(min);
+ document.getElementById("Ny"+i).style.left=Xpos+i*XCbase/4.1*Math.cos(min);
+ }
+for (i=0; i < H.length; i++){
+ document.getElementById("Nz"+i).style.top=Ypos+i*YCbase/4.1*Math.sin(hrs);
+ document.getElementById("Nz"+i).style.left=Xpos+i*XCbase/4.1*Math.cos(hrs);
+ }
+}
+if (NS4){
+Ypos=window.pageYOffset+window.innerHeight-YCbase-20;
+Xpos=window.pageXOffset+window.innerWidth-XCbase-30;
+for (i=0; i < cdots; ++i){
+ document.layers["nsDigits"+i].top=Ypos-5+YCbase*Math.sin(-1.045 +i*Split*Math.PI/180)
+ document.layers["nsDigits"+i].left=Xpos-15+XCbase*Math.cos(-1.045 +i*Split*Math.PI/180)
+ }
+for (i=0; i < S.length; i++){
+ document.layers["nx"+i].top=Ypos+i*YCbase/4.1*Math.sin(sec);
+ document.layers["nx"+i].left=Xpos+i*XCbase/4.1*Math.cos(sec);
+ }
+for (i=0; i < M.length; i++){
+ document.layers["ny"+i].top=Ypos+i*YCbase/4.1*Math.sin(min);
+ document.layers["ny"+i].left=Xpos+i*XCbase/4.1*Math.cos(min);
+ }
+for (i=0; i < H.length; i++){
+ document.layers["nz"+i].top=Ypos+i*YCbase/4.1*Math.sin(hrs);
+ document.layers["nz"+i].left=Xpos+i*XCbase/4.1*Math.cos(hrs);
+ }
+}
+
+if (IE4){
+Ypos=document.body.scrollTop+window.document.body.clientHeight-YCbase-20;
+Xpos=document.body.scrollLeft+window.document.body.clientWidth-XCbase-20;
+for (i=0; i < cdots; ++i){
+ ieDigits[i].style.pixelTop=Ypos-15+YCbase*Math.sin(-1.045 +i *Split*Math.PI/180)
+ ieDigits[i].style.pixelLeft=Xpos-15+XCbase*Math.cos(-1.045 +i *Split*Math.PI/180)
+ }
+for (i=0; i < S.length; i++){
+ x[i].style.pixelTop =Ypos+i*YCbase/4.1*Math.sin(sec);
+ x[i].style.pixelLeft=Xpos+i*XCbase/4.1*Math.cos(sec);
+ }
+for (i=0; i < M.length; i++){
+ y[i].style.pixelTop =Ypos+i*YCbase/4.1*Math.sin(min);
+ y[i].style.pixelLeft=Xpos+i*XCbase/4.1*Math.cos(min);
+ }
+for (i=0; i < H.length; i++){
+ z[i].style.pixelTop =Ypos+i*YCbase/4.1*Math.sin(hrs);
+ z[i].style.pixelLeft=Xpos+i*XCbase/4.1*Math.cos(hrs);
+ }
+}
+setTimeout('clock()',100);
+}
+clock();
+//-->
+</script>
+<div id="text1" style="position:absolute; overflow:hidden; left:346px; top:426px; width:532px; height:138px; z-index:1">
+<div class="wpmd">
+<div align=center><font color="#FF0000" face="Calisto MT" class="ws72"><B><I>Anonymous</I></B></font></div>
+</div></div>
+
+<div id="text2" style="position:absolute; overflow:hidden; left:76px; top:686px; width:710px; height:242px; z-index:2">
+<div class="wpmd">
+<div><font color="#FF0000" face="Calisto MT" class="ws26"><B><I>No limits of knowledge No limits of penetration No limits to professionalism</I></B></font></div>
+<div><font color="#FF0000" face="Calisto MT" class="ws26"><B><I><BR></I></B></font></div>
+<div><font color="#00FFFF" face="Calisto MT" class="ws26"><B><I>If I think of my penetration, I will raise my hand to judge you and your courage</I></B></font></div>
+</div></div>
+
+<div id="nav10d" style="position:absolute; left:77px; top:1010px; z-index:3"><a onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav10','','images/nav44277960a.gif',1)" href="http://www.facebook.com"><img name="nav10" onLoad="MM_preloadImages('images/nav44277960a.gif')" alt="" border=0 src="images/nav44277960i.gif"></a></div>
+<div id="nav11d" style="position:absolute; left:413px; top:1010px; z-index:3"><a onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav11','','images/nav44277961a.gif',1)" href="http://www.yahoo.com"><img name="nav11" onLoad="MM_preloadImages('images/nav44277961a.gif')" alt="" border=0 src="images/nav44277961i.gif"></a></div>
+<div id="nav12d" style="position:absolute; left:749px; top:1010px; z-index:3"><a onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('nav12','','images/nav44277962a.gif',1)" href="http://www.twitter.com"><img name="nav12" onLoad="MM_preloadImages('images/nav44277962a.gif')" alt="" border=0 src="images/nav44277962i.gif"></a></div>
+
+<script LANGUAGE="JavaScript">
+<!--
+// image src
+var trailsrc = "images/images.jpg";
+
+var nDots = 7;
+var Xbpos = 0;
+var Ybpos = 0;
+
+// fixed time step, no relation to real time
+var DELTAT = .01;
+// size of one spring in pixels
+var SEGLEN = 10;
+// spring constant, stiffness of springs
+var SPRINGK = 10;
+// all the physics is bogus, just picked stuff to make it look okay
+var MASS = 1;
+// Positive XGRAVITY pulls right, negative pulls left
+// Positive YGRAVITY pulls down, negative up
+var XGRAVITY = 0;
+var YGRAVITY = 50;
+// RESISTANCE determines a slowing force proportional to velocity
+var RESISTANCE = 10;
+// stopping criterea to prevent endless jittering
+// doesn't work when sitting on bottom since floor
+// doesn't push back so acceleration always as big
+// as gravity
+var STOPVEL = 0.1;
+var STOPACC = 0.1;
+var DOTSIZE = 11;
+// BOUNCE is percent of velocity retained when 
+// bouncing off a wall
+var BOUNCE = 0.75;
+
+var ff=(document.getElementById&&!document.all);
+var ns=(document.layers);
+var ie=(document.all);
+
+// always on for now, could be played with to
+// let dots fall to botton, get thrown, etc.
+var followmouse = true;
+var dots = new Array();
+
+function init()
+{
+    var i = 0;
+    for (i = 0; i < nDots; i++) {
+        dots[i] = new dot(i);
+    }
+    
+    // set their positions
+    for (i = 0; i < nDots; i++) {
+        dots[i].obj.left = dots[i].X;
+        dots[i].obj.top = dots[i].Y;
+    }
+    
+    setTimeout("startanimate()", 10);
+}
+
+function dot(i) 
+{
+	this.X  = Xbpos;
+	this.Y  = Ybpos;
+	this.dx = 0;
+	this.dy = 0;
+	
+	if (ns){
+	  document.write("<layer id=\"mtrail"+ i +"\" ><img src='"+trailsrc+"' border=\"0\"><\/layer>");
+	} else if (ie||ff) {
+	if (i == 0) {
+	  document.write("<div id=\"mtrail"+ i +"\" style=\"POSITION: absolute;z-index:999;VISIBILITY: hidden;\"><img src='"+trailsrc+"' border=\"0\"><\/div>");
+	} else {
+          document.write("<div id=\"mtrail"+ i +"\" style=\"POSITION: absolute; z-index:999;\"><img src='"+trailsrc+"' border=\"0\"><\/div>");
+        }
+        }	
+	
+	if (ie) 
+	{
+		this.obj = eval("mtrail" + i + ".style");
+	} else if (ff) 
+	{
+		this.obj = document.getElementById("mtrail" + i).style;
+	}
+	else
+	{
+		this.obj = eval("document.mtrail" + i);
+	}
+}
+
+function startanimate() {	
+    setInterval("animate()", 20);
+}
+
+// just save mouse position for animate() to use
+function MoveHandler(e)
+{
+    if (ie) {
+    	Xbpos = window.event.clientX + document.body.scrollLeft;
+    	Ybpos = window.event.clientY + document.body.scrollTop;
+    }
+    else {
+    	Xbpos = e.pageX;
+    	Ybpos = e.pageY;
+    }
+}
+
+function vec(X, Y)
+{
+    this.X = X;
+    this.Y = Y;
+}
+
+// adds force in X and Y to spring for dot[i] on dot[j]
+function springForce(i, j, spring)
+{
+    var dx = (dots[i].X - dots[j].X);
+    var dy = (dots[i].Y - dots[j].Y);
+    var len = Math.sqrt(dx*dx + dy*dy);
+    if (len > SEGLEN) {
+        var springF = SPRINGK * (len - SEGLEN);
+        spring.X += (dx / len) * springF;
+        spring.Y += (dy / len) * springF;
+    }
+}
+
+
+function animate() {	
+    // dots[0] follows the mouse,
+    // though no dot is drawn there
+    var start = 0;
+    if (followmouse) {
+        dots[0].X = Xbpos;
+        dots[0].Y = Ybpos;	
+        start = 1;
+    }
+    
+    for (i = start ; i < nDots; i++ ) {
+        
+        var spring = new vec(0, 0);
+        if (i > 0) {
+            springForce(i-1, i, spring);
+        }
+        if (i < (nDots - 1)) {
+            springForce(i+1, i, spring);
+        }
+        
+        // air resisitance/friction
+        var resist = new vec(-dots[i].dx * RESISTANCE,
+            -dots[i].dy * RESISTANCE);
+        
+        // compute new accel, including gravity
+        var accel = new vec((spring.X + resist.X)/MASS + XGRAVITY,
+            (spring.Y + resist.Y)/ MASS + YGRAVITY);
+        
+        // compute new velocity
+        dots[i].dx += (DELTAT * accel.X);
+        dots[i].dy += (DELTAT * accel.Y);
+        
+        // stop dead so it doesn't jitter when nearly still
+        if (Math.abs(dots[i].dx) < STOPVEL &&
+            Math.abs(dots[i].dy) < STOPVEL &&
+            Math.abs(accel.X) < STOPACC &&
+            Math.abs(accel.Y) < STOPACC) {
+            dots[i].dx = 0;
+            dots[i].dy = 0;
+        }
+        
+        // move to new position
+        dots[i].X += dots[i].dx;
+        dots[i].Y += dots[i].dy;
+        
+        // get size of window
+        var height, width;
+        if (!ie) {
+            height = window.innerHeight + window.pageYOffset;
+            width = window.innerWidth + window.pageXOffset;
+        } else {	
+            height = document.body.clientHeight + document.body.scrollTop;
+            width = document.body.clientWidth + document.body.scrollLeft;
+        }
+        
+        // bounce off 3 walls (leave ceiling open)
+        if (dots[i].Y >=  height - DOTSIZE - 1) {
+            if (dots[i].dy > 0) {
+                dots[i].dy = BOUNCE * -dots[i].dy;
+            }
+            dots[i].Y = height - DOTSIZE - 1;
+        }
+        if (dots[i].X >= width - DOTSIZE) {
+            if (dots[i].dx > 0) {
+                dots[i].dx = BOUNCE * -dots[i].dx;
+            }
+            dots[i].X = width - DOTSIZE - 1;
+        }
+        if (dots[i].X < 0) {
+            if (dots[i].dx < 0) {
+                dots[i].dx = BOUNCE * -dots[i].dx;
+            }
+            dots[i].X = 0;
+        }
+        
+        // move img to new position
+        dots[i].obj.left = dots[i].X;			
+        dots[i].obj.top =  dots[i].Y;		
+    }
+}
+
+init();
+if(ns)window.captureEvents(Event.MOUSEMOVE);
+document.onmousemove = MoveHandler;
+-->
+</script>
+<div style="position:absolute; top:1712; left:79; z-index:5">
+<script language="JavaScript1.2">
+
+//configure message
+message="We are Anonymous We are Legion We do not forgive We do not forget Expect us"
+//animate text in NS6? (0 will turn it off)
+ns6switch=1
+
+var ns6=document.getElementById&&!document.all
+
+mes=new Array();
+mes[0]=-1;
+mes[1]=-4;
+mes[2]=-7;
+mes[3]=-10;
+mes[4]=-7;
+mes[5]=-4;
+mes[6]=-1;
+num=0;
+num2=0;
+txt="";
+
+function jump0(){
+if (ns6&&!ns6switch){
+jump.innerHTML=message
+return
+}
+if(message.length > 6){
+for(i=0; i != message.length;i++){
+txt=txt+"<span style='position:relative;' id='n"+i+"'>"+message.charAt(i)+"</span>"};
+jump.innerHTML=txt;
+txt="";
+jump1a()
+}
+else{
+//alert("Your message is too short. 7 characters at least!")
+}
+}
+
+function jump1a(){
+nfinal=(document.getElementById)? document.getElementById("n0") : document.all.n0
+nfinal.style.left=-num2;
+if(num2 != 9){
+num2=num2+3;
+setTimeout("jump1a()",50)
+}
+else{
+jump1b()
+}
+}
+
+function jump1b(){
+nfinal.style.left=-num2;
+if(num2 != 0){num2=num2-3;
+setTimeout("jump1b()",50)
+}
+else{
+jump2()
+}
+}
+
+function jump2(){
+txt="";
+for(i=0;i != message.length;i++){
+if(i+num > -1 && i+num < 7){
+txt=txt+"<span style='position:relative;top:"+mes[i+num]+"'>"+message.charAt(i)+"</span>"
+}
+else{txt=txt+"<span>"+message.charAt(i)+"</span>"}
+}
+jump.innerHTML=txt;
+txt="";
+if(num != (-message.length)){
+num--;
+setTimeout("jump2()",50)}
+else{num=0;
+setTimeout("jump0()",50)}
+}
+</script>
+
+<font face="Times" size=5 color=#FF0000><div id="jumpx"></div></font>
+
+<script>
+if (document.all||document.getElementById){
+jump=(document.getElementById)? document.getElementById("jumpx") : document.all.jumpx
+jump0()
+}
+</script>
+</div>
+<div id="text3" style="position:absolute; overflow:hidden; left:336px; top:1447px; width:437px; height:232px; z-index:6">
+<div class="wpmd">
+<div><font color="#FF0000" face="Calisto MT" class="ws72">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font color="#FF0000" face="Calisto MT" class="ws72"><B><I>&nbsp;&nbsp;&nbsp; H</I></B></font><font color="#000080" face="Calisto MT" class="ws72"><B><I>A</I></B></font><font color="#FFFF00" face="Calisto MT" class="ws72"><B><I>K</I></B></font><font color="#FFFFFF" face="Calisto MT" class="ws72"><B><I>5</I></B></font></div>
+</div></div>
+
+<div id="text4" style="position:absolute; overflow:hidden; left:736px; top:1854px; width:341px; height:44px; z-index:7">
+<div class="wpmd">
+<div><font color="#FF0000" face="Calisto MT" class="ws18">BY</font><font color="#FFFF00" face="Calisto MT" class="ws18">:</font><font face="Calisto MT" class="ws18"> </font><font color="#FFFFFF" face="Calisto MT" class="ws18">Mohamed</font><font face="Calisto MT" class="ws18"> </font><font color="#000080" face="Calisto MT" class="ws18">_</font><font face="Calisto MT" class="ws18"> </font><font color="#008000" face="Calisto MT" class="ws18">Hacker</font></div>
+</div></div>
+
+<div id="image1" style="position:absolute; overflow:hidden; left:109px; top:1094px; width:903px; height:430px; z-index:8"><img src="images/are-expect-us-events-denial-style-recent-2400x1350-wallpaper.jpg" alt="" title="" border=0 width=903 height=430></div>
+
+</body>
+</html>
