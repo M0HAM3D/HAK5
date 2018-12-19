@@ -8,6 +8,8 @@ The tool allows you to scan your penetration tests
 
 To download the tool For (KaiL,PaROoT,Termux)
 
+apt install git (0r) pkg install git 
+
 git clone https://github.com/M0HAM3D/HAK5
 
 cd HAK5
