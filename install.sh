@@ -13,6 +13,7 @@ echo -e "$white[$red 2 $white] $blue TermuX \n"
 echo -e $white
 read -p "[ H_A_K_5 / Install ]~# " ins
 if [ "$ins" = "2" ];then
+	cd ~
 	apt update && apt upgrade
 	chmod 700 HAK5.sh
 	pkg install python -y
@@ -39,6 +40,7 @@ if [ "$ins" = "2" ];then
 	pip install urllib2
 	mkdir /sdcard/HAK5
 	echo -e -n "		Enter Any Kay TO Run HAK5    " ;read Enter
+	cd HAK5
 	bash HAK5.sh
 elif [ "$ins" = "1" ]; then 
 	mv model .model
