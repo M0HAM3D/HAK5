@@ -13,7 +13,7 @@ echo -e "$white[$red 2 $white] $blue TermuX \n"
 echo -e $white
 read -p "[ H_A_K_5 / Install ]~# " ins
 if [ "$ins" = "2" ];then
-	cd ~
+	
 	apt update && apt upgrade
 	chmod 700 HAK5.sh
 	pkg install python -y
@@ -47,7 +47,6 @@ elif [ "$ins" = "1" ]; then
 	mkdir HAK5_PaYLOad
 	chmod +x HAK5.sh
 	chmod 700 HAK5.sh
-	cd ~
 	sudo apt-get install toilet -y
 	sudo apt-get install wget -y
 	sudo apt-get install figlet -y
